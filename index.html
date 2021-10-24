@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Coding Quick</title>
+    <link rel="stylesheet" href="assets/CSS/style.css" />
+</head>
+
+<body>
+    <header class="header">
+        <div>
+            <a href="#high-score" id="high-score">View High Score</a>
+            <h1 id="time-label">Time: </h1>
+            <h1 id="time">60</h1>
+        </div>
+    </header>
+    <div id="quiz-container">
+        <div id="start">
+            <!-- Main page-->
+            <h1>Coding Quiz Challenge</h1>
+            <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect
+                answers
+                will penalize your score/time by ten seconds!</p>
+            <button class="button" id="button-start"> Start Quiz</button>
+        </div>
+            <div id="question1">
+                <h1>Who invented JavaScript?</h1>
+                <button class="button" id="button0-1">Cuppa Java</button><br>
+                <button class="button" id="button0-2">Rita Script</button><br>
+                <button class="button" id="button0-3">Brendan Eich</button>
+            </div>
+            <div id="question2">
+                <h1>Which type of variable is visible only within a function where it is defined?</h1>
+                <button class="button" id="button1-1">global variable</button><br>
+                <button class="button" id="button1-2">local variable</button><br>
+                <button class="button" id="button1-3">both of the above</button>
+            </div>
+            <div id="question3">
+                <h1>What is not included in strings?</h1>
+                <button class="button" id="button2-1">Images</button><br>
+                <button class="button" id="button2-2">Punctuation</button><br>
+                <button class="button" id="button2-3">Spaces</button>
+            </div>
+            <div id="question4">
+                <h1>What can .length be used for?</h1>
+                <button class="button" id="button3-1"> To add length to a variable</button><br>
+                <button class="button" id="button3-2">To determine the length of a string</button><br>
+                <button class="button" id="button3-3">To make your webpage longer</button>
+            </div>
+            <div id="question5">
+                <h1> A boolean is a value that can be: </h1>
+                <button class="button" id="button4-1">True</button><br>
+                <button class="button" id="button4-2">False</button><br>
+                <button class="button" id="button4-3">Both</button>
+            </div>
+        </div>
+        <div id="final-score">
+            <h1>Final Score</h1>
+            <p>All Set!</p>
+            <label for="initials">Insert Initials</label>
+            <input type="text" id="initials" name="initials">
+            <button onclick="saveInitials()" class="button" id="submit-button">Submit</button>
+        </div>
+        <div id="score-page">
+            <h1>High Scores</h1>
+            <input type="text" id="scores" name="scores">
+            <button class="button" id="go-back-button">Start Over</button>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>

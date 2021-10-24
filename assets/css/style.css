@@ -1,0 +1,39 @@
+.header {
+    padding-left: 60px;
+    padding-top: 40px;
+    padding-right: 80px;
+}
+
+#time, #time-label {
+    font-size: 16px;
+    font-family:'Times New Roman', Times, serif;
+    color: rgb(187, 117, 187); 
+}
+
+#high-score {
+    font-size: 16px;
+    font-family:'Times New Roman', Times, serif;
+    color: rgb(187, 117, 187); 
+}
+
+#quiz-container, #final-score, #score-page {
+    text-align: center;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-top: 100px;
+}
+
+#question1, #question2, #question3, #question4, #question5  {
+    display: none;
+}
+#final-score, #score-page {
+    display: none;
+}
+
+.button {
+    background-color: blueviolet;
+    border-radius: 25px;
+    color: white;
+    font-size: 20px;
+    border-style: solid black;
+} 
