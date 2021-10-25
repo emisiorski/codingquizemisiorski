@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Coding Quick</title>
+    <title>Coding Quiz</title>
     <link rel="stylesheet" href="assets/CSS/style.css" />
 </head>
 
@@ -57,14 +57,15 @@
         </div>
         <div id="final-score">
             <h1>Final Score</h1>
-            <p>All Set!</p>
+            <p>All Set!</p><br>
+            <p>Your score is:</p><h1 id="total-score">0</h1>
             <label for="initials">Insert Initials</label>
             <input type="text" id="initials" name="initials">
-            <button onclick="saveInitials()" class="button" id="submit-button">Submit</button>
+            <button class="button" id="submit-button">Submit</button>
         </div>
         <div id="score-page">
             <h1>High Scores</h1>
-            <input type="text" id="scores" name="scores">
+            <h2 id="list-of-scores">Initial</h2>
             <button class="button" id="go-back-button">Start Over</button>
         </div>
     </div>

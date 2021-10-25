@@ -13,13 +13,13 @@ var quizQuestionsFive = document.getElementById("question5");
 var highScores = document.getElementById("score-page");
 var quizPoints = 0;
 var count = 60;
-time.textContent = count;
+
 
 //what happens when you click the start button
 startButton.addEventListener('click', function () {
     // decrease the timer by 1 after button is clicked
 
-        var timer = setInterval(function () { 
+        setInterval(function () { 
         if (count > 0) {
             count -= 1;
             time.textContent = count;
@@ -38,7 +38,6 @@ startButton.addEventListener('click', function () {
     // displays only the first question when button is clicked
     startPage.style.display = "none";
     quizQuestionsOne.style.display = "block";
-    console.log(timer);
 }
 )
 
@@ -157,18 +156,18 @@ quizQuestionsFour.addEventListener('click', function (event) {
     console.log(wrongAnswerTwo);
     function addQuizPoints() {
         if (selectedButton === "To add length to a variable") {
-            console.log(quizPoints);
             count -= 10;
             time.textContent = count;
+            console.log(quizPoints);
         }
         else if (selectedButton === "To determine the length of a string") {
             quizPoints += 1;
             console.log(quizPoints);
         }
         else if (selectedButton === "To make your webpage longer") {
-            console.log(quizPoints);
             count -= 10;
             time.textContent = count;
+            console.log(quizPoints);
         }
     }
     addQuizPoints();
@@ -212,12 +211,13 @@ quizQuestionsFive.addEventListener('click', function (event) {
     quizQuestionsFour.style.display = "none";
     quizQuestionsFive.style.display = "none";
     submitPage.style.display = "block";
-    clearInterval(timer);
+    clearInterval(count);
+    count = null;
+    var totalScore = document.getElementById("total-score");
+    totalScore.textContent = quizPoints;
     })
-
-
-
-function saveInitials() {
+    
+submitButton.addEventListener('click', function () {  
 var storeInitials = document.getElementById("initials").value;
 console.log(storeInitials);
 quizQuestionsOne.style.display = "none";
@@ -227,7 +227,10 @@ quizQuestionsFour.style.display = "none";
 quizQuestionsFive.style.display = "none";
 submitPage.style.display = "none";
 highScores.style.display = "block";
-}
+count = 60;
+var scoreList = document.getElementById("list-of-scores");
+scoreList.textContent = (storeInitials + "---" + quizPoints);
+})
 
 
 

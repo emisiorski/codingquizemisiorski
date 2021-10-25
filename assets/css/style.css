@@ -37,3 +37,8 @@
     font-size: 20px;
     border-style: solid black;
 } 
+#list-of-scores {
+    font-size: 16px;
+    font-family:'Times New Roman', Times, serif;
+    color: rgb(146, 31, 146); 
+}
