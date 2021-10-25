@@ -41,7 +41,7 @@ startButton.addEventListener('click', function () {
     quizQuestionsOne.style.display = "block";
 }
 )
-
+//When you click on an answer for question 1, you get points and go to the next question
 quizQuestionsOne.addEventListener('click', function (event) {
     var selectedButton = event.target.innerHTML;
     console.log(selectedButton);
