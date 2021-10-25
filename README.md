@@ -17,3 +17,4 @@ THEN I can save my initials and score
 
 https://emisiorski.github.io/codingquizemisiorski/
 
+<img width="1388" alt="Screen Shot 2021-10-24 at 9 44 43 PM" src="https://user-images.githubusercontent.com/90798919/138628134-6918d9f7-6c25-4edd-93fc-6fc8b427fbb9.png">
