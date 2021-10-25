@@ -18,7 +18,8 @@ time.textContent = count;
 //what happens when you click the start button
 startButton.addEventListener('click', function () {
     // decrease the timer by 1 after button is clicked
-    setInterval(function () {
+
+        var timer = setInterval(function () { 
         if (count > 0) {
             count -= 1;
             time.textContent = count;
@@ -32,10 +33,12 @@ startButton.addEventListener('click', function () {
             quizQuestionsFive.style.display = "none";
             submitPage.style.display = "block";
         }
+       
     }, 1000);
     // displays only the first question when button is clicked
     startPage.style.display = "none";
     quizQuestionsOne.style.display = "block";
+    console.log(timer);
 }
 )
 
@@ -209,10 +212,7 @@ quizQuestionsFive.addEventListener('click', function (event) {
     quizQuestionsFour.style.display = "none";
     quizQuestionsFive.style.display = "none";
     submitPage.style.display = "block";
-    function clearInterval() {
-
-    }
-        clearInterval();
+    clearInterval(timer);
     })
 
 
@@ -230,11 +230,12 @@ highScores.style.display = "block";
 }
 
 
+
  //time for loop startButton.addEventListener('click', function () {
 //     setInterval(function () {
 
 
 
 //Click the button to show results
-// submitButton.addEventListener('click' + showResults)
+
 
