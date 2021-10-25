@@ -14,6 +14,7 @@ var highScores = document.getElementById("score-page");
 var quizPoints = 0;
 var count = 60;
 var startOver = document.getElementById("go-back-button");
+var highScoreButton = document.getElementById("high-score");
 
 
 //what happens when you click the start button
@@ -33,6 +34,7 @@ startButton.addEventListener('click', function () {
             quizQuestionsFour.style.display = "none";
             quizQuestionsFive.style.display = "none";
             submitPage.style.display = "block";
+            highScores.style.display = "none";
         }
 
     }, 1000);
@@ -230,11 +232,12 @@ submitButton.addEventListener('click', function () {
     highScores.style.display = "block";
     count = 60;
     var scoreList = document.getElementById("list-of-scores");
-    scoreList.textContent = (storeInitials + "---" + quizPoints);
+    scoreList.textContent += (storeInitials + "--" + quizPoints + "\n");
 })
 
 startOver.addEventListener('click', function () {
-    quizQuestionsOne.style.display = "block";
+    startPage.style.display = "block";
+    quizQuestionsOne.style.display = "none";
     quizQuestionsTwo.style.display = "none";
     quizQuestionsThree.style.display = "none";
     quizQuestionsFour.style.display = "none";
@@ -242,13 +245,15 @@ startOver.addEventListener('click', function () {
     submitPage.style.display = "none";
     highScores.style.display = "none";
     count = 60;
+    quizPoints = 0;
 })
-
- //time for loop startButton.addEventListener('click', function () {
-//     setInterval(function () {
-
-
-
-//Click the button to show results
-
-
+highScoreButton.addEventListener('click', function () {
+    startPage.style.display = "none";
+    quizQuestionsOne.style.display = "none";
+    quizQuestionsTwo.style.display = "none";
+    quizQuestionsThree.style.display = "none";
+    quizQuestionsFour.style.display = "none";
+    quizQuestionsFive.style.display = "none";
+    submitPage.style.display = "none";
+    highScores.style.display = "block";
+})

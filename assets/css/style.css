@@ -30,6 +30,11 @@
     display: none;
 }
 
+#score-page {
+    margin-right: 800;
+    margin-left: 800;
+}
+
 .button {
     background-color: blueviolet;
     border-radius: 25px;
@@ -41,4 +46,5 @@
     font-size: 16px;
     font-family:'Times New Roman', Times, serif;
     color: rgb(146, 31, 146); 
+    text-align: center;
 }
