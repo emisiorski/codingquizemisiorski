@@ -13,13 +13,14 @@ var quizQuestionsFive = document.getElementById("question5");
 var highScores = document.getElementById("score-page");
 var quizPoints = 0;
 var count = 60;
+var startOver = document.getElementById("go-back-button");
 
 
 //what happens when you click the start button
 startButton.addEventListener('click', function () {
     // decrease the timer by 1 after button is clicked
 
-        setInterval(function () { 
+    setInterval(function () {
         if (count > 0) {
             count -= 1;
             time.textContent = count;
@@ -33,7 +34,7 @@ startButton.addEventListener('click', function () {
             quizQuestionsFive.style.display = "none";
             submitPage.style.display = "block";
         }
-       
+
     }, 1000);
     // displays only the first question when button is clicked
     startPage.style.display = "none";
@@ -215,24 +216,33 @@ quizQuestionsFive.addEventListener('click', function (event) {
     count = null;
     var totalScore = document.getElementById("total-score");
     totalScore.textContent = quizPoints;
-    })
-    
-submitButton.addEventListener('click', function () {  
-var storeInitials = document.getElementById("initials").value;
-console.log(storeInitials);
-quizQuestionsOne.style.display = "none";
-quizQuestionsTwo.style.display = "none";
-quizQuestionsThree.style.display = "none";
-quizQuestionsFour.style.display = "none";
-quizQuestionsFive.style.display = "none";
-submitPage.style.display = "none";
-highScores.style.display = "block";
-count = 60;
-var scoreList = document.getElementById("list-of-scores");
-scoreList.textContent = (storeInitials + "---" + quizPoints);
 })
 
+submitButton.addEventListener('click', function () {
+    var storeInitials = document.getElementById("initials").value;
+    console.log(storeInitials);
+    quizQuestionsOne.style.display = "none";
+    quizQuestionsTwo.style.display = "none";
+    quizQuestionsThree.style.display = "none";
+    quizQuestionsFour.style.display = "none";
+    quizQuestionsFive.style.display = "none";
+    submitPage.style.display = "none";
+    highScores.style.display = "block";
+    count = 60;
+    var scoreList = document.getElementById("list-of-scores");
+    scoreList.textContent = (storeInitials + "---" + quizPoints);
+})
 
+startOver.addEventListener('click', function () {
+    quizQuestionsOne.style.display = "block";
+    quizQuestionsTwo.style.display = "none";
+    quizQuestionsThree.style.display = "none";
+    quizQuestionsFour.style.display = "none";
+    quizQuestionsFive.style.display = "none";
+    submitPage.style.display = "none";
+    highScores.style.display = "none";
+    count = 60;
+})
 
  //time for loop startButton.addEventListener('click', function () {
 //     setInterval(function () {
